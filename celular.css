@@ -4,3 +4,13 @@
    }
   }
   
+
+  @media (min-width: 768px) and (max-width: 1920px) { 
+      .container_links>ul>li>a{
+        width: 400px;
+      }
+
+      .container_icons>ion-icon{
+        padding: 18px 22px;
+      }
+  }
