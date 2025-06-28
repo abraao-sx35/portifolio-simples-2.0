@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-image: var(--bg-url);
+    background-position: center left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 108vh;
+    backdrop-filter: blur(2px);
+    transition: color 0.4s ease, background-image 0.8s ease;
+}
+
+.container_apresentacao{
+    text-align: center;
+    padding: 50px 24px 15px 24px;
+}
+
+
+.container_apresentacao>img{
+    border: 2px solid var(--borde-color);
+    border-radius: 50%;
+}
+
+/* botao de trocar o modo do site(light/dark) */
+.container_botao{
+    text-align: center;
+    position: relative;
+    width: 65px;
+    margin: 4px auto;
+}
+
+.container_botao>button{
+    background-color: var(--back-color-botao);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    background-image: var(--back-color-botao);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+
+}
+
+.container_botao>span{
+    margin: 0 auto;
+    display: block;
+    width: 64px;
+    height: 24px;
+    background-color: var(--back-color);
+    border: 1px solid var(--borde-color);
+    border-radius: 9999px;
+    position: relative;
+}
+
+/* botao modo light */
+
+ .light .container_botao  button{
+     right: 0;
+     left: initial;
+ }
+
+
+
+/* menu de links */
+.container_links{
+    margin-top: 20px;
+    padding: 0px 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+
+.container_links>ul>li>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: var(--back-color);
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--borde-color);
+    color: var(--text-color);
+    padding: 16px 36px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 15px;
+    transition: background-color 0.7s;
+
+}
+
+.container_links>ul>li>a:hover{
+    background-color: var(--back-color-hover);
+    border: 1.5px solid var(--borde-color);
+}
+
+.container_icons{
+    padding: 16px 24px;
+    text-align: center;
+}
+
+.container_icons>ion-icon{
+    padding: 14px;
+    transition: background 0.8s ;
+    border-radius: 50%;
+}
+
+.container_icons>ion-icon:hover{
+    background-color: var(--back-color-hover);
+    border-radius: 50%;
+}
+
+footer{
+    text-align: center;
+}
+
+footer>b{
+    text-decoration: underline;
+}
+
+/* modos do site */
+:root{
+   --text-color: white;
+   --bg-url: url(imagens/L\ fundo\ preto.jpg!d);
+   --borde-color: rgba(255,255,255,0.5);
+   --back-color: rgba(5, 5, 5, 0.068);
+   --back-color-hover:rgba(170, 170, 170, 0.308);
+   --back-color-botao: rgba(236, 231, 231, 0.856);
+}
+
+.light{
+    --text-color: rgb(221, 214, 214);
+    --bg-url: url(imagens/kira\ fundo\ certo.png); 
+    --borde-color: rgba(235, 10, 10, 0.5);
+    --back-color: rgba(0, 0, 0, 0.13);
+    --back-color-hover:rgba(148, 4, 4, 0.363);
+    --back-color-botao: rgba(24, 22, 22, 0.932);
+
+}
